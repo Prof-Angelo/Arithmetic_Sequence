@@ -88,6 +88,9 @@
       background-color: #e9ecef;
       border-radius: 4px;
     }
+
+
+
   </style>
   
   
@@ -125,7 +128,9 @@
     
     <div class="result" id="result"></div>
     
+
   </div>
+
 
 
 
@@ -135,30 +140,42 @@
       return a + (n - 1) * d;
     }
 
+
+
     function sumOfTerms(a, d, n) {
       const nth = nthTerm(a, d, n);
       return (n / 2) * (a + nth);
     }
+
+
 
     function calculate() {
       const a = Number(document.getElementById("firstTerm").value);
       const d = Number(document.getElementById("commonDiff").value);
       const n = Number(document.getElementById("numTerms").value);
 
+
+
       if (isNaN(a) || isNaN(d) || isNaN(n) || n <= 0) {
-        document.getElementById("result").innerText = "Created by: Blanco 03/19/22";
+       
+
+ document.getElementById("result").innerText = "Created by: Blanco 03/19/22";
         return;
       }
+
+
 
       const nth = nthTerm(a, d, n);
       const sum = sumOfTerms(a, d, n);
 
-      document.getElementById("result").innerHTML = `
+     
+ document.getElementById("result").innerHTML = `
         <p><strong>${n}th Term:</strong> ${nth}</p>
         <p><strong>Sum of First ${n} Terms:</strong> ${sum}</p>
       `;
     }
     
+
     
   </script>
 </body>
